@@ -1,11 +1,30 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
+
+const s string = "constants"
 
 func main() {
 	values()
 
 	variables()
+
+	constants()
+}
+
+// constants
+func constants() {
+	fmt.Println(s)
+
+	const n = 50000000
+
+	const d = 3e20 / n
+	fmt.Println(d)
+
+	fmt.Println(math.Sin(n))
 }
 
 // variables
