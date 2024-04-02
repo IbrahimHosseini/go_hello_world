@@ -20,10 +20,35 @@ func main() {
 	ifElse()
 
 	switchSample()
+
+	array()
+}
+
+// Array
+func array() {
+	var a [5]int
+	fmt.Println(a)
+
+	a[3] = 14
+	a[1] = 20
+	fmt.Println(a)
+
+	fmt.Println("Lenght: ", len(a))
+
+	b := [3]int{1, 2, 3}
+	fmt.Println(len(b))
+
+	var twoD [2][3]int
+	for i := 0; i < 2; i++ {
+		for j := 0; j < 3; j++ {
+			twoD[i][j] = i + j
+		}
+	}
+
+	fmt.Println("2D => ", twoD)
 }
 
 // switch
-
 func switchSample() {
 	switch time.Now().Weekday() {
 	case time.Friday:
