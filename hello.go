@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"time"
 )
 
 const s string = "constants"
@@ -17,6 +18,25 @@ func main() {
 	forLoops()
 
 	ifElse()
+
+	switchSample()
+}
+
+// switch
+
+func switchSample() {
+	switch time.Now().Weekday() {
+	case time.Friday:
+		fmt.Println("Friday")
+	case time.Monday:
+		fmt.Println(" Monday")
+	case time.Thursday:
+		fmt.Println(" Thursday")
+	case time.Wednesday:
+		fmt.Println(" Wednesday")
+	default:
+		fmt.Println("Other day")
+	}
 }
 
 // If/else
